@@ -21,7 +21,7 @@ export default async function AboutPage() {
       <PageHero eyebrow={a.headingAccent} heading={a.heading} intro={a.intro} />
       <section className="bg-white py-12 lg:py-20">
         <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
-          <div className="relative aspect-[4/3] overflow-hidden bg-cloud">
+          <div data-reveal="left" className="relative aspect-[4/3] overflow-hidden bg-cloud">
             <SafeImage src={a.image} alt="Haven Customs technician at work" fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover" />
           </div>
           <div>

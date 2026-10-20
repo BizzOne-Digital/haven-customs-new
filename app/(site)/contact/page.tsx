@@ -29,7 +29,7 @@ export default async function ContactPage({ searchParams }: { searchParams: SP }
             <p className="mb-6 mt-2 text-sm text-steel">Fields marked * are required.</p>
             <QuoteForm options={options} preselected={pre} />
           </div>
-          <aside className="space-y-8">
+          <aside data-reveal="right" className="space-y-8">
             <div className="border border-cloud bg-pearl p-6">
               <h2 className="heading text-2xl">Visit the shop</h2>
               <ul className="mt-5 space-y-4 text-sm text-graphite">

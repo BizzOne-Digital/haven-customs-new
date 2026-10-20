@@ -75,7 +75,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
               </p>
             )}
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden bg-cloud lg:[clip-path:polygon(8%_0,100%_0,100%_100%,0_100%)]">
+          <div data-reveal="zoom" className="relative aspect-[4/3] overflow-hidden bg-cloud lg:[clip-path:polygon(8%_0,100%_0,100%_100%,0_100%)]">
             <SafeImage src={cover?.url} alt={cover?.alt || p.name} fill priority sizes="(min-width:1024px) 600px, 100vw" className="object-cover" fallbackLabel={p.name} />
           </div>
         </div>
@@ -135,7 +135,7 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
             </div>
           </div>
 
-          <aside className="h-fit border border-cloud bg-pearl p-6 lg:sticky lg:top-28">
+          <aside data-reveal="right" className="h-fit border border-cloud bg-pearl p-6 lg:sticky lg:top-28">
             <h2 className="heading text-2xl">Details</h2>
             <dl className="mt-5 space-y-4 text-sm">
               {p.category && (

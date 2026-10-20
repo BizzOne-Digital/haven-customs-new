@@ -94,7 +94,7 @@ export function PrecisionBanner({ l1, l2, l3, text, image }: { l1: string; l2: s
             <BookButton />
           </div>
         </div>
-        <div className="relative -mx-4 aspect-[16/10] sm:mx-0 lg:aspect-auto lg:h-full lg:min-h-[480px]">
+        <div data-reveal="right" className="relative -mx-4 aspect-[16/10] sm:mx-0 lg:aspect-auto lg:h-full lg:min-h-[480px]">
           <SafeImage
             src={image}
             alt="Graphite performance car"
@@ -133,7 +133,7 @@ export function EditorialRow({
 }) {
   return (
     <div className={`grid items-center gap-6 md:grid-cols-2 lg:gap-12 ${reverse ? "md:[&>*:first-child]:order-2" : ""}`}>
-      <div className="relative aspect-[16/8] overflow-hidden bg-cloud">
+      <div data-reveal={reverse ? "right" : "left"} className="relative aspect-[16/8] overflow-hidden bg-cloud">
         <SafeImage src={image} alt={imageAlt} fill sizes="(min-width:768px) 50vw, 100vw" className="object-cover" />
       </div>
       <div className={reverse ? "md:pl-0" : "md:pr-6"}>

@@ -19,16 +19,16 @@ type Props = {
 export default function Hero({ line1, line2, tagline, text, image, imageAlt, mode }: Props) {
   const cutout = mode === "cutout";
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(120%_90%_at_30%_40%,#ffffff_0%,#f1f1f2_55%,#e6e7e9_100%)]">
+    <section data-no-reveal className="relative overflow-hidden bg-[radial-gradient(120%_90%_at_30%_40%,#ffffff_0%,#f1f1f2_55%,#e6e7e9_100%)]">
       <div aria-hidden className="diag-accent pointer-events-none absolute inset-0" />
       <div className="relative mx-auto grid max-w-[1320px] gap-8 px-4 pb-12 pt-8 sm:px-6 sm:pt-10 lg:grid-cols-[1fr_300px] lg:gap-6 lg:px-10 lg:pb-16 lg:pt-6">
         <div className="relative [--fs:clamp(4.4rem,19.5vw,9.5rem)] lg:[--fs:min(13.6vw,14.25rem)]">
           <h1 className="relative">
-            <span className="display relative z-0 block text-race" style={{ fontSize: "var(--fs)" }}>
+            <span className="display hero-in-left relative z-0 block text-race" style={{ fontSize: "var(--fs)" }}>
               {line1}
             </span>
             <span
-              className="display metal relative z-0 block pb-[0.06em] pl-[0.02em]"
+              className="display metal hero-in-right relative z-0 block pb-[0.06em] pl-[0.02em]"
               style={{ fontSize: "var(--fs)", marginTop: "calc(var(--fs) * 0.5)" }}
             >
               {line2}
@@ -37,7 +37,7 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
 
           {/* Vehicle layer — overlaps both lines */}
           <div
-            className="absolute z-10"
+            className="hero-drive absolute z-10"
             style={{
               left: "calc(var(--fs) * 0.95)",
               top: "calc(var(--fs) * 0.56)",
@@ -71,7 +71,7 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
         </div>
 
         {/* Right column (desktop) / stacked copy (mobile) */}
-        <div className="flex flex-col items-center text-center lg:items-start lg:justify-center lg:pt-24 lg:text-left">
+        <div className="hero-fade flex flex-col items-center text-center lg:items-start lg:justify-center lg:pt-24 lg:text-left">
           <span aria-hidden className="mb-6 hidden h-[4px] w-14 bg-race lg:block" />
           <p className="whitespace-pre-line text-base font-bold uppercase tracking-[0.22em] text-ink lg:text-[1.6rem] lg:leading-tight lg:tracking-[0.06em]">
             <span className="lg:hidden">{tagline.replace(/\n/g, " ")}</span>
