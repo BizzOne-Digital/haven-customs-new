@@ -196,3 +196,32 @@ html.motion .is-in li:nth-child(n + 8) { transition-delay: 680ms; }
 
 /* Image hover lift on cards already zooms; add a subtle button lift */
 .btn:hover { transform: translateY(-1px); }
+
+/* Hero car idle "engine running" float — starts after the drive-in entrance */
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(-0.4deg); }
+}
+.hero-float { animation: hero-float 4.5s 1.4s ease-in-out infinite; }
+
+/* Hero car: enters from the right, parks, exits left (HeroCar then scrolls to #services),
+   and finally drives back in from the right to park. */
+@keyframes hero-run {
+  0% { transform: translateX(110vw); }
+  34% { transform: translateX(-1.5%); }   /* arrive with a slight overshoot */
+  42% { transform: translateX(0); }       /* settle */
+  76% { transform: translateX(0); }       /* parked */
+  80% { transform: translateX(1.5%); }    /* small roll back before pulling away */
+  100% { transform: translateX(-130vw); } /* exit left */
+}
+@keyframes hero-return {
+  from { transform: translateX(110vw); }
+  85% { transform: translateX(-1.5%); }
+  to { transform: translateX(0); }
+}
+.hero-loop { animation: hero-run 7s 0.2s cubic-bezier(0.45, 0, 0.25, 1) both; }
+.hero-loop.is-returning { animation: hero-return 2.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-loop, .hero-loop.is-returning { animation: none; }
+}
+

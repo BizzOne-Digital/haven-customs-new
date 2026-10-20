@@ -33,7 +33,7 @@ export type ServiceTile = { title: string; href: string; image: string; alt: str
 
 export function ServicesGrid({ eyebrow, heading, accent, tiles }: { eyebrow: string; heading: string; accent: string; tiles: ServiceTile[] }) {
   return (
-    <section className="bg-white py-14 lg:py-20">
+    <section id="services" className="scroll-mt-[84px] bg-white py-14 lg:scroll-mt-[100px] lg:py-20">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

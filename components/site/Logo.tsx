@@ -11,7 +11,7 @@ export default function Logo({ className = "h-12", priority = false }: { classNa
         width={448}
         height={226}
         priority={priority}
-        className={`w-auto drop-shadow-[0_1px_1.5px_rgba(0,0,0,0.35)] ${className}`}
+        className={`w-auto drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)] ${className}`}
         sizes="400px"
         quality={85}
       />

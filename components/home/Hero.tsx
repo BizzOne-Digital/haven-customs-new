@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SafeImage from "@/components/ui/SafeImage";
 import Arrow from "@/components/site/Arrow";
+import HeroCar from "./HeroCar";
 
 type Props = {
   line1: string;
@@ -37,7 +38,7 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
 
           {/* Vehicle layer — overlaps both lines */}
           <div
-            className="hero-drive absolute z-10"
+            className="hero-loop absolute z-10"
             style={{
               left: "calc(var(--fs) * 0.95)",
               top: "calc(var(--fs) * 0.56)",
@@ -45,28 +46,30 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
               aspectRatio: cutout ? "2.1 / 1" : "2.5 / 1",
             }}
           >
-            {cutout ? (
-              <SafeImage
-                src={image}
-                alt={imageAlt}
-                fill
-                priority
-                sizes="(min-width:1024px) 640px, 90vw"
-                className="object-contain drop-shadow-[0_28px_28px_rgba(0,0,0,0.35)]"
-              />
-            ) : (
-              <div className="relative h-full w-full shadow-[0_30px_50px_-20px_rgba(0,0,0,0.55)] [clip-path:polygon(7%_0,100%_0,93%_100%,0_100%)]">
+            <HeroCar>
+              {cutout ? (
                 <SafeImage
                   src={image}
                   alt={imageAlt}
                   fill
                   priority
-                  sizes="(min-width:1024px) 680px, 92vw"
-                  className="object-cover object-[50%_62%]"
+                  sizes="(min-width:1024px) 640px, 90vw"
+                  className="object-contain drop-shadow-[0_28px_28px_rgba(0,0,0,0.35)]"
                 />
-                <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/10" />
-              </div>
-            )}
+              ) : (
+                <div className="relative h-full w-full shadow-[0_30px_50px_-20px_rgba(0,0,0,0.55)] [clip-path:polygon(7%_0,100%_0,93%_100%,0_100%)]">
+                  <SafeImage
+                    src={image}
+                    alt={imageAlt}
+                    fill
+                    priority
+                    sizes="(min-width:1024px) 680px, 92vw"
+                    className="object-cover object-[50%_62%]"
+                  />
+                  <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/10" />
+                </div>
+              )}
+            </HeroCar>
           </div>
         </div>
 

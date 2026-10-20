@@ -58,7 +58,7 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className={`sticky top-0 z-40 bg-white/95 backdrop-blur transition-shadow ${scrolled ? "shadow-[0_1px_0_#e4e5e7]" : ""}`}>
+    <header className={`sticky top-0 z-40 border-b border-white/10 bg-[#0d0d0f]/95 backdrop-blur transition-shadow ${scrolled ? "shadow-[0_6px_20px_rgba(0,0,0,0.35)]" : ""}`}>
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-white focus:px-3 focus:py-2">
         Skip to content
       </a>
@@ -70,7 +70,7 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
               key={n.href}
               href={n.href}
               aria-current={isActive(n.href) ? "page" : undefined}
-              className={`text-[0.82rem] font-semibold transition-colors hover:text-race ${isActive(n.href) ? "text-race" : "text-ink"}`}
+              className={`text-[0.82rem] font-semibold transition-colors hover:text-race ${isActive(n.href) ? "text-race" : "text-white/85"}`}
             >
               {n.label}
             </Link>
@@ -86,7 +86,7 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="grid h-11 w-11 place-items-center text-ink lg:hidden"
+            className="grid h-11 w-11 place-items-center text-white lg:hidden"
           >
             {open ? <X className="h-6 w-6" aria-hidden /> : <Menu className="h-6 w-6" aria-hidden />}
           </button>
@@ -98,7 +98,7 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
         id="mobile-menu"
         ref={drawerRef}
         hidden={!open}
-        className="fixed inset-x-0 bottom-0 top-[84px] z-40 overflow-y-auto bg-white lg:hidden"
+        className="fixed inset-x-0 bottom-0 top-[84px] z-40 overflow-y-auto bg-[#0d0d0f] lg:hidden"
       >
         <nav aria-label="Mobile" className="flex flex-col px-5 pb-10 pt-4">
           {[...NAV, ...MORE].map((n) => (
@@ -106,14 +106,14 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
               key={n.href}
               href={n.href}
               aria-current={isActive(n.href) ? "page" : undefined}
-              className={`display border-b border-cloud py-4 text-4xl ${isActive(n.href) ? "text-race" : "text-ink"}`}
+              className={`display border-b border-white/10 py-4 text-4xl ${isActive(n.href) ? "text-race" : "text-white"}`}
             >
               {n.label}
             </Link>
           ))}
           <div className="mt-8 flex flex-col gap-3">
             <BookButton className="btn btn-red w-full" />
-            <a href={phoneHref} className="btn btn-outline w-full">
+            <a href={phoneHref} className="btn w-full border border-white/25 text-white hover:border-white">
               <Phone className="h-4 w-4" aria-hidden /> {phone}
             </a>
           </div>
