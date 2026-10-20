@@ -1,26 +1,137 @@
 @import "tailwindcss";
 
+@theme {
+  --color-race: #ed1018;
+  --color-race-dark: #c40d14;
+  --color-ink: #0d0d0f;
+  --color-graphite: #2b2d31;
+  --color-steel: #5d6168;
+  --color-silver: #a9adb3;
+  --color-mist: #d9dbde;
+  --color-pearl: #f3f3f4;
+  --color-cloud: #ebecee;
+
+  --font-display: var(--font-anton), Impact, "Arial Narrow", sans-serif;
+  --font-cond: var(--font-roboto-condensed), "Arial Narrow", sans-serif;
+  --font-num: var(--font-oswald), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --tracking-tightest: -0.01em;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-graphite);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Display type: Anton with a slanted (italic) treatment */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-synthesis: style;
+  text-transform: uppercase;
+  line-height: 0.9;
+  letter-spacing: var(--tracking-tightest);
+}
+/* Anton upright, e.g. BUILT AROUND YOUR DRIVE. */
+.heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.98;
+  letter-spacing: 0;
+  color: var(--color-ink);
+}
+.upright { font-style: normal; }
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-race);
+}
+
+/* Metallic gray type for the hero second line */
+.metal {
+  background: linear-gradient(180deg, #c9ccd1 0%, #9a9ea5 45%, #7c8088 55%, #b9bcc2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.diag-accent {
+  background-image: linear-gradient(115deg, transparent 0 58%, rgba(13, 13, 15, 0.05) 58% 66%, transparent 66% 70%, rgba(237, 16, 24, 0.12) 70% 71.5%, transparent 71.5%);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.7rem 1.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+.btn-red { background: var(--color-race); color: #fff; }
+.btn-red:hover { background: var(--color-race-dark); }
+.btn-black { background: var(--color-ink); color: #fff; }
+.btn-black:hover { background: #26272b; }
+.btn-white { background: #fff; color: var(--color-race); }
+.btn-white:hover { background: var(--color-pearl); }
+.btn-outline { border: 1px solid var(--color-mist); color: var(--color-ink); background: #fff; }
+.btn-outline:hover { border-color: var(--color-ink); }
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-race);
+}
+.link-arrow svg { transition: transform 0.2s; }
+.link-arrow:hover svg { transform: translate(2px, -2px); }
+
+:focus-visible {
+  outline: 2px solid var(--color-race);
+  outline-offset: 2px;
+}
+
+.field {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--color-mist);
+  background: #fff;
+  border-radius: 2px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+.field:focus { outline: none; border-color: var(--color-ink); box-shadow: 0 0 0 3px rgba(237, 16, 24, 0.15); }
+.field[aria-invalid="true"] { border-color: var(--color-race); }
+.label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--color-ink); margin-bottom: 0.35rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

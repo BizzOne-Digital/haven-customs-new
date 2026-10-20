@@ -1,0 +1,91 @@
+{
+  "generator": "Built-in image_gen",
+  "style": "Single photorealistic premium automotive website asset; graphite/black, restrained racing red; no text, logos, watermarks, UI or collages.",
+  "note": "Illustrative generated artwork; not photographs of customer vehicles or verified branded product models.",
+  "assets": [
+    {
+      "key": "heroCar",
+      "url": "/images/haven/hero-car.png",
+      "transparent": true,
+      "prompt": "Transparent overhead graphite convertible, tan interior, nose left, full vehicle, studio highlights, no background or text."
+    },
+    {
+      "key": "tint",
+      "url": "/images/haven/window-tint.webp",
+      "transparent": false,
+      "prompt": "Black-gloved professional installing ceramic tint film on graphite car side window, red workshop accents."
+    },
+    {
+      "key": "ppf",
+      "url": "/images/haven/paint-protection.webp",
+      "transparent": false,
+      "prompt": "Black-gloved hands stretching wet transparent PPF over a graphite sports car hood."
+    },
+    {
+      "key": "ceramic",
+      "url": "/images/haven/ceramic-coating.webp",
+      "transparent": false,
+      "prompt": "Black-gloved hand applying ceramic coating using a suede applicator block to glossy graphite hood."
+    },
+    {
+      "key": "dashcam",
+      "url": "/images/haven/dashcam.webp",
+      "transparent": false,
+      "prompt": "Generic premium three-channel dashcam beside rearview mirror, neatly hidden wiring, illustrative equipment."
+    },
+    {
+      "key": "interior",
+      "url": "/images/haven/carplay-interior.webp",
+      "transparent": false,
+      "prompt": "Graphite luxury cockpit, generic navigation and music display, stitched leather and subtle red ambient lighting."
+    },
+    {
+      "key": "light",
+      "url": "/images/haven/headlight.webp",
+      "transparent": false,
+      "prompt": "Detailed modern LED headlight on graphite sports car, clear lens and subtle red studio reflections."
+    },
+    {
+      "key": "tire",
+      "url": "/images/haven/tire-service.webp",
+      "transparent": false,
+      "prompt": "Automotive technician mounting performance tire on black alloy wheel in clean workshop."
+    },
+    {
+      "key": "decal",
+      "url": "/images/haven/vinyl-wrap.webp",
+      "transparent": false,
+      "prompt": "Professional applying satin-red vinyl to graphite sports car door and fender."
+    },
+    {
+      "key": "wheel",
+      "url": "/images/haven/alloy-wheel.webp",
+      "transparent": false,
+      "prompt": "Satin-black alloy wheel with red brake caliper, realistic tire, disc and lug nuts."
+    },
+    {
+      "key": "precisionCar",
+      "url": "/images/haven/precision-car.webp",
+      "transparent": false,
+      "prompt": "Graphite sports coupe front three-quarter view in airy pearl-gray studio, nose left."
+    },
+    {
+      "key": "tailLight",
+      "url": "/images/haven/tail-light.webp",
+      "transparent": false,
+      "prompt": "Closeup illuminated red LED tail light and graphite rear quarter panel in dark studio."
+    },
+    {
+      "key": "blackCar",
+      "url": "/images/haven/chrome-delete.webp",
+      "transparent": false,
+      "prompt": "Glossy black performance coupe rear three-quarter view, blacked-out trim and tinted windows."
+    },
+    {
+      "key": "graphite",
+      "url": "/images/haven/logo-blackout.webp",
+      "transparent": false,
+      "prompt": "Graphite front grille and clean unbranded blacked-out emblem area, sculpted hood and studio reflections."
+    }
+  ]
+}
