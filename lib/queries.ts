@@ -91,13 +91,13 @@ export async function getPage<K extends PageKey>(key: K): Promise<(typeof PAGE_D
   }
 }
 
-export async function getCategories(): Promise<PublicCategory[]> {
+async function getCategoriesUnsafe(): Promise<PublicCategory[]> {
   await connectDB();
   const cats = await Category.find({ isActive: true }).sort({ sortOrder: 1, name: 1 }).lean();
   return cats.map(toCategory);
 }
 
-export async function getProducts(filter: { categories?: string[]; vehicle?: string; q?: string; featured?: boolean } = {}) {
+async function getProductsUnsafe(filter: { categories?: string[]; vehicle?: string; q?: string; featured?: boolean } = {}) {
   await connectDB();
   const activeCats = await Category.find({ isActive: true }, { _id: 1, slug: 1 }).lean();
   let catIds = activeCats.map((c) => c._id);
@@ -124,7 +124,7 @@ export async function getProducts(filter: { categories?: string[]; vehicle?: str
     });
 }
 
-export async function getProductBySlug(slug: string) {
+async function getProductBySlugUnsafe(slug: string) {
   await connectDB();
   const p = await Product.findOne({ slug, isActive: true }, PUBLIC_PRODUCT_FIELDS).populate("category", "name slug isActive").lean();
   if (!p) return null;
@@ -139,7 +139,7 @@ export async function getRelatedProducts(product: PublicProduct, limit = 3) {
   return all.filter((p) => p.slug !== product.slug).slice(0, limit);
 }
 
-export async function getActiveProductOptions() {
+async function getActiveProductOptionsUnsafe() {
   await connectDB();
   const items = await Product.find({ isActive: true }, "name slug category")
     .populate("category", "name slug sortOrder isActive")
@@ -160,7 +160,7 @@ export async function getActiveProductOptions() {
     });
 }
 
-export async function getActiveOffers(): Promise<PublicOffer[]> {
+async function getActiveOffersUnsafe(): Promise<PublicOffer[]> {
   await connectDB();
   const now = new Date();
   const offers = await Offer.find({
@@ -182,8 +182,30 @@ export async function getActiveOffers(): Promise<PublicOffer[]> {
   }));
 }
 
-export async function getGallery(): Promise<PublicGalleryItem[]> {
+async function getGalleryUnsafe(): Promise<PublicGalleryItem[]> {
   await connectDB();
   const items = await GalleryItem.find({ isActive: true }).sort({ sortOrder: 1, createdAt: -1 }).limit(200).lean();
   return items.map((g) => ({ id: String(g._id), image: resolveImageUrl(g.image), alt: g.alt ?? "", caption: g.caption ?? "", category: g.category ?? "General" }));
 }
+
+/* ───────────── Safe public exports ─────────────
+   If the database is unreachable (e.g. MONGODB_URI missing on a deployment), public pages
+   still render with empty catalog data instead of crashing. The error is logged. */
+
+function safe<A extends unknown[], R, F>(fn: (...args: A) => Promise<R>, fallback: F, name: string) {
+  return async (...args: A): Promise<R | F> => {
+    try {
+      return await fn(...args);
+    } catch (err) {
+      console.error(`[queries] ${name} failed — returning fallback`, err);
+      return fallback;
+    }
+  };
+}
+
+export const getCategories = safe(getCategoriesUnsafe, [] as Awaited<ReturnType<typeof getCategoriesUnsafe>>, "getCategories");
+export const getProducts = safe(getProductsUnsafe, [] as Awaited<ReturnType<typeof getProductsUnsafe>>, "getProducts");
+export const getProductBySlug = safe(getProductBySlugUnsafe, null, "getProductBySlug");
+export const getActiveProductOptions = safe(getActiveProductOptionsUnsafe, [] as Awaited<ReturnType<typeof getActiveProductOptionsUnsafe>>, "getActiveProductOptions");
+export const getActiveOffers = safe(getActiveOffersUnsafe, [] as Awaited<ReturnType<typeof getActiveOffersUnsafe>>, "getActiveOffers");
+export const getGallery = safe(getGalleryUnsafe, [] as Awaited<ReturnType<typeof getGalleryUnsafe>>, "getGallery");

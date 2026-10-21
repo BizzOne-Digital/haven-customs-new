@@ -27,7 +27,18 @@ export default async function ContactPage({ searchParams }: { searchParams: SP }
           <div id="quote">
             <h2 className="heading text-3xl">Request a quote</h2>
             <p className="mb-6 mt-2 text-sm text-steel">Fields marked * are required.</p>
-            <QuoteForm options={options} preselected={pre} />
+            {options.length > 0 ? (
+              <QuoteForm options={options} preselected={pre} />
+            ) : (
+              // Catalog unavailable (e.g. database offline) — don't show a form that can't be submitted.
+              <div className="border-l-2 border-race bg-pearl p-6 text-sm text-graphite">
+                <p className="font-semibold text-ink">Online quote requests are temporarily unavailable.</p>
+                <p className="mt-2">Please call the shop and our team will help you right away.</p>
+                <a href={s.phoneHref} className="btn btn-red mt-4">
+                  <Phone className="h-4 w-4" aria-hidden /> Call {s.phone}
+                </a>
+              </div>
+            )}
           </div>
           <aside data-reveal="right" className="space-y-8">
             <div className="border border-cloud bg-pearl p-6">
