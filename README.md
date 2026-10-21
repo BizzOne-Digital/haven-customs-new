@@ -43,7 +43,7 @@ All DB, auth and upload handlers run on the Node.js runtime. Every public page r
 - `GHL_BOOKING_WIDGET_URL` is the default calendar.
 - `GHL_CALENDAR_MAP` is JSON keyed by a product's **Calendar key**. Seeded key: `mon-thu` (ceramic coating, headlight and tail light tint).
 - **Restrictions must also be configured inside GHL.** The website shows "Monday – Thursday only", but only the GHL calendar's availability actually blocks Friday–Sunday. Create a separate calendar with Mon–Thu availability and map it to `mon-thu`.
-- The widget URL gets a `?service=<name>` parameter. To capture it, add a matching hidden/custom field in the GHL booking form.
+- Default calendar: Haven "Service booking" (`nHnHjnp24SvMsZmSECZ2`), used when `GHL_BOOKING_WIDGET_URL` is blank. The widget URL is used as-is — GHL returns 404 if extra query params such as `?service=` are added, so the customer picks the service inside the GHL form.
 - Confirmation SMS/email is handled by GHL workflows.
 - If no URL is set, booking buttons show a call/contact fallback. They never show a broken iframe or a fake success.
 

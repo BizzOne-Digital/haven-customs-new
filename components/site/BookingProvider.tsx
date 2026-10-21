@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Script from "next/script";
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { CalendarClock, Phone, X } from "lucide-react";
 
@@ -16,13 +17,12 @@ export function useBooking() {
   return ctx;
 }
 
-/** Resolve the GHL widget URL for a service and attach the service context as a query param. */
+/**
+ * Resolve the GHL widget URL for a service. The URL is used as-is: GHL's booking widget
+ * returns 404 when unknown query params (e.g. ?service=) are appended.
+ */
 export function bookingUrl(config: BookingConfig, ctx?: BookingContext) {
-  const base = (ctx?.calendarKey && config.calendars[ctx.calendarKey]) || config.defaultUrl;
-  if (!base) return "";
-  const u = new URL(base);
-  if (ctx?.name) u.searchParams.set("service", ctx.name);
-  return u.toString();
+  return (ctx?.calendarKey && config.calendars[ctx.calendarKey]) || config.defaultUrl;
 }
 
 export default function BookingProvider({
@@ -61,6 +61,8 @@ export default function BookingProvider({
   return (
     <BookingCtx.Provider value={{ open, config, phone, phoneHref }}>
       {children}
+      {/* GHL's embed helper: resizes booking iframes to their content height */}
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
       <dialog
         ref={dialogRef}
         onClose={close}
@@ -84,7 +86,7 @@ export default function BookingProvider({
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto">
               {url ? (
-                <iframe src={url} title="Book an appointment with Haven Customs" className="h-[70vh] w-full border-0" loading="lazy" />
+                <GhlCalendar src={url} idSuffix="modal" className="min-h-[70vh]" />
               ) : (
                 <BookingFallback phone={phone} phoneHref={phoneHref} slug={state.ctx?.slug} onNavigate={close} />
               )}
@@ -125,5 +127,21 @@ export function BookingFallback({
         </Link>
       </div>
     </div>
+  );
+}
+
+/** GHL booking widget iframe, matching GHL's own embed code (id = calendar id + suffix). */
+export function GhlCalendar({ src, idSuffix, className = "" }: { src: string; idSuffix: string; className?: string }) {
+  const calendarId = new URL(src).pathname.split("/").filter(Boolean).pop() ?? "ghl";
+  return (
+    <iframe
+      key={src}
+      src={src}
+      id={`${calendarId}_${idSuffix}`}
+      title="Book an appointment with Haven Customs"
+      allow="payment"
+      scrolling="no"
+      className={`w-full overflow-hidden border-0 ${className}`}
+    />
   );
 }

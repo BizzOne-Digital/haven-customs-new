@@ -120,9 +120,15 @@ function isSafeWidgetUrl(v: string) {
   }
 }
 
+/**
+ * Haven Customs "Service booking" calendar (permanent GHL widget link). It is a public URL,
+ * not a secret, so it is the fallback when GHL_BOOKING_WIDGET_URL is not set.
+ */
+const HAVEN_BOOKING_WIDGET = "https://api.leadconnectorhq.com/widget/booking/nHnHjnp24SvMsZmSECZ2";
+
 /** Public booking widget URLs (not secrets). Mapping keys match Product.calendarKey. */
 export function getBookingConfig(): BookingConfig {
-  const defaultUrl = process.env.GHL_BOOKING_WIDGET_URL ?? "";
+  const defaultUrl = process.env.GHL_BOOKING_WIDGET_URL || HAVEN_BOOKING_WIDGET;
   let calendars: Record<string, string> = {};
   try {
     const raw = JSON.parse(process.env.GHL_CALENDAR_MAP ?? "{}");

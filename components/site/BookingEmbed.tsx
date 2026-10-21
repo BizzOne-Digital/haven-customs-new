@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CalendarClock, Info } from "lucide-react";
-import { BookingFallback, bookingUrl, useBooking } from "./BookingProvider";
+import { BookingFallback, bookingUrl, GhlCalendar, useBooking } from "./BookingProvider";
 
 type Service = { slug: string; name: string; calendarKey: string; bookingNote: string; group: string };
 
@@ -46,7 +46,7 @@ export default function BookingEmbed({ services, initial }: { services: Service[
       </div>
       <div className="min-h-[560px] border border-cloud bg-white">
         {url ? (
-          <iframe key={url} src={url} title="Book an appointment with Haven Customs" className="h-[760px] w-full border-0" loading="lazy" />
+          <GhlCalendar src={url} idSuffix="page" className="min-h-[760px]" />
         ) : (
           <BookingFallback phone={phone} phoneHref={phoneHref} slug={svc?.slug} />
         )}
