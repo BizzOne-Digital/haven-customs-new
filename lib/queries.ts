@@ -5,6 +5,7 @@ import { DEFAULT_SETTINGS } from "./constants";
 import { PAGE_DEFAULTS, type PageKey } from "./content";
 import { Category, GalleryItem, Offer, Product } from "./models/catalog";
 import { PageContent, SiteSettings } from "./models/ops";
+import { fallbackCategories, fallbackProductBySlug, fallbackProducts } from "./fallbackCatalog";
 
 /* ───────────── Public DTOs — explicit allow-lists, never spread documents ───────────── */
 
@@ -189,23 +190,44 @@ async function getGalleryUnsafe(): Promise<PublicGalleryItem[]> {
 }
 
 /* ───────────── Safe public exports ─────────────
-   If the database is unreachable (e.g. MONGODB_URI missing on a deployment), public pages
-   still render with empty catalog data instead of crashing. The error is logged. */
+   If the database is unreachable (e.g. MONGODB_URI missing on a deployment) public pages still
+   render instead of crashing. The catalog falls back to the built-in seed data (no prices) when
+   the database fails or has not been seeded yet; once seeded, admin-managed data is used. */
 
-function safe<A extends unknown[], R, F>(fn: (...args: A) => Promise<R>, fallback: F, name: string) {
+function safe<A extends unknown[], R, F>(fn: (...args: A) => Promise<R>, fallback: (...args: A) => F, name: string) {
   return async (...args: A): Promise<R | F> => {
     try {
       return await fn(...args);
     } catch (err) {
-      console.error(`[queries] ${name} failed — returning fallback`, err);
-      return fallback;
+      console.error(`[queries] ${name} failed — using fallback`, err);
+      return fallback(...args);
     }
   };
 }
 
-export const getCategories = safe(getCategoriesUnsafe, [] as Awaited<ReturnType<typeof getCategoriesUnsafe>>, "getCategories");
-export const getProducts = safe(getProductsUnsafe, [] as Awaited<ReturnType<typeof getProductsUnsafe>>, "getProducts");
-export const getProductBySlug = safe(getProductBySlugUnsafe, null, "getProductBySlug");
-export const getActiveProductOptions = safe(getActiveProductOptionsUnsafe, [] as Awaited<ReturnType<typeof getActiveProductOptionsUnsafe>>, "getActiveProductOptions");
-export const getActiveOffers = safe(getActiveOffersUnsafe, [] as Awaited<ReturnType<typeof getActiveOffersUnsafe>>, "getActiveOffers");
-export const getGallery = safe(getGalleryUnsafe, [] as Awaited<ReturnType<typeof getGalleryUnsafe>>, "getGallery");
+/** True when the database is reachable but holds no catalog yet. */
+async function catalogIsEmpty() {
+  await connectDB();
+  return (await Category.estimatedDocumentCount()) === 0;
+}
+
+export const getCategories = safe(
+  async () => ((await catalogIsEmpty()) ? fallbackCategories() : getCategoriesUnsafe()),
+  fallbackCategories,
+  "getCategories"
+);
+export const getProducts = safe(
+  async (filter: Parameters<typeof getProductsUnsafe>[0] = {}) =>
+    (await catalogIsEmpty()) ? fallbackProducts(filter) : getProductsUnsafe(filter),
+  (filter: Parameters<typeof getProductsUnsafe>[0] = {}) => fallbackProducts(filter),
+  "getProducts"
+);
+export const getProductBySlug = safe(
+  async (slug: string) => ((await catalogIsEmpty()) ? fallbackProductBySlug(slug) : getProductBySlugUnsafe(slug)),
+  fallbackProductBySlug,
+  "getProductBySlug"
+);
+// The quote form needs the database to save inquiries, so it stays empty (call-only) without one.
+export const getActiveProductOptions = safe(getActiveProductOptionsUnsafe, () => [], "getActiveProductOptions");
+export const getActiveOffers = safe(getActiveOffersUnsafe, () => [], "getActiveOffers");
+export const getGallery = safe(getGalleryUnsafe, () => [], "getGallery");
