@@ -5,6 +5,7 @@ import { DEFAULT_SETTINGS } from "./constants";
 import { PAGE_DEFAULTS, type PageKey } from "./content";
 import { Category, GalleryItem, Offer, Product } from "./models/catalog";
 import { PageContent, SiteSettings } from "./models/ops";
+import PRODUCT_IMAGES from "./product-images.json";
 import { fallbackCategories, fallbackProductBySlug, fallbackProducts } from "./fallbackCatalog";
 
 /* ───────────── Public DTOs — explicit allow-lists, never spread documents ───────────── */
@@ -37,6 +38,13 @@ const toCategory = (c: any): PublicCategory => ({
   image: resolveImageUrl(c.image), icon: c.icon ?? "sparkles",
 });
 
+/** Use the product's own built-in photo unless the admin uploaded one. */
+function withProductImage(slug: string, images: PublicImage[]): PublicImage[] {
+  const own = (PRODUCT_IMAGES as Record<string, string>)[slug];
+  if (!own || images[0]?.url.startsWith("/api/uploads/")) return images;
+  return [{ url: own, alt: images[0]?.alt ?? "" }, ...images.slice(1)];
+}
+
 const toProduct = (p: any): PublicProduct => ({
   id: String(p._id), name: p.name, slug: p.slug,
   category: p.category && typeof p.category === "object" && "slug" in p.category
@@ -45,7 +53,7 @@ const toProduct = (p: any): PublicProduct => ({
   features: [...(p.features ?? [])], options: [...(p.options ?? [])], vehicleTypes: [...(p.vehicleTypes ?? [])],
   brand: p.brand ?? "", warranty: p.warranty ?? "", bookingNote: p.bookingNote ?? "", calendarKey: p.calendarKey ?? "",
   faqs: (p.faqs ?? []).map((f: any) => ({ q: f.q, a: f.a })),
-  images: (p.images ?? []).map((i: any) => ({ url: resolveImageUrl(i.url), alt: i.alt ?? "" })),
+  images: withProductImage(p.slug, (p.images ?? []).map((i: any) => ({ url: resolveImageUrl(i.url), alt: i.alt ?? "" }))),
   isFeatured: Boolean(p.isFeatured),
 });
 /* eslint-enable @typescript-eslint/no-explicit-any */

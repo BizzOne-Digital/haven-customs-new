@@ -1,0 +1,466 @@
+{
+  "generator": "Built-in image_gen",
+  "note": "Illustrative generated automotive service imagery. Generic devices, not verified branded product photographs.",
+  "count": 51,
+  "images": [
+    {
+      "slug": "air-valve-replacement",
+      "file": "/images/products/air-valve-replacement.webp",
+      "size": 97348,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Close-up of technician fitting a new metal valve stem through a wheel rim valve hole, tire bead moved aside, accurate mechanical detail."
+    },
+    {
+      "slug": "ambient-lights",
+      "file": "/images/products/ambient-lights.webp",
+      "size": 93810,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Beautiful luxury car interior with red ambient light strips along dashboard and doors, refined leather, realistic clean lighting installation."
+    },
+    {
+      "slug": "azdome-550-pro",
+      "file": "/images/products/azdome-550-pro.webp",
+      "size": 72438,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Generic dashcam with a bright IPS-style screen showing a parking-lot view at night, inside dark vehicle, no readable text."
+    },
+    {
+      "slug": "azdome-m580-3ch-5k",
+      "file": "/images/products/azdome-m580-3ch-5k.webp",
+      "size": 78570,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Generic three-camera dashcam kit, front camera, rear camera and cabin camera arranged separately on black acrylic, exactly three camera units."
+    },
+    {
+      "slug": "back-windshield-tint",
+      "file": "/images/products/back-windshield-tint.webp",
+      "size": 127716,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Rear windshield of a black sedan being tinted, technician using a heat gun to gently warm the film."
+    },
+    {
+      "slug": "backup-camera-installation",
+      "file": "/images/products/backup-camera-installation.webp",
+      "size": 83986,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Small backup camera above rear licence plate recess of a black SUV, blank plate, close detail of clean concealed installation."
+    },
+    {
+      "slug": "bent-steel-rim-repair",
+      "file": "/images/products/bent-steel-rim-repair.webp",
+      "size": 142172,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Steel wheel rim clamped on a professional wheel-straightening machine, slight bent lip clearly visible, technician adjusting tooling."
+    },
+    {
+      "slug": "caliper-painting",
+      "file": "/images/products/caliper-painting.webp",
+      "size": 107196,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Fresh bright red painted brake caliper behind satin-black alloy spokes, detailed close-up, immaculate finish, no caliper branding."
+    },
+    {
+      "slug": "carplay-installation",
+      "file": "/images/products/carplay-installation.webp",
+      "size": 92754,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Technician hands fitting a multimedia screen into a modern car dashboard, trim temporarily removed, realistic careful installation."
+    },
+    {
+      "slug": "carplay-power-adapter",
+      "file": "/images/products/carplay-power-adapter.webp",
+      "size": 74436,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Car USB power adapter and black cable plugged into dashboard USB port, accurate connector, neat product close-up."
+    },
+    {
+      "slug": "ceramic-coating-level-1",
+      "file": "/images/products/ceramic-coating-level-1.webp",
+      "size": 121666,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Black-gloved hand applying ceramic coating with a small suede applicator block on glossy graphite car hood."
+    },
+    {
+      "slug": "ceramic-coating-level-2",
+      "file": "/images/products/ceramic-coating-level-2.webp",
+      "size": 176468,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Macro photograph of spherical water beads on a freshly ceramic-coated graphite car panel, crisp droplets and studio reflections."
+    },
+    {
+      "slug": "ceramic-coating-level-3",
+      "file": "/images/products/ceramic-coating-level-3.webp",
+      "size": 125246,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Mirror-like deep gloss reflections on a black car side, sculptural studio strip lights, premium pristine coated finish."
+    },
+    {
+      "slug": "ceramic-tint",
+      "file": "/images/products/ceramic-tint.webp",
+      "size": 160784,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Gloved hands squeegeeing ceramic tint film onto a graphite sedan side window."
+    },
+    {
+      "slug": "chameleon-windshield-tint",
+      "file": "/images/products/chameleon-windshield-tint.webp",
+      "size": 93728,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Graphite sedan front windshield with colour-shifting purple-blue chameleon tint, beautiful iridescent reflection."
+    },
+    {
+      "slug": "chrome-delete",
+      "file": "/images/products/chrome-delete.webp",
+      "size": 93316,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Black-gloved technician wrapping a car window chrome trim in gloss black vinyl, a short chrome section still visible beside wrapped section."
+    },
+    {
+      "slug": "dashcam-installation-add-ons",
+      "file": "/images/products/dashcam-installation-add-ons.webp",
+      "size": 95478,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Black-gloved technician tucking a dashcam wire into the car headliner and A-pillar edge, small fuse-tap kit nearby."
+    },
+    {
+      "slug": "front-half-ppf",
+      "file": "/images/products/front-half-ppf.webp",
+      "size": 212052,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Clear paint protection film covering front section of graphite hood and fenders, film edge and wet squeegee application visible, angled close view."
+    },
+    {
+      "slug": "front-windshield-tint",
+      "file": "/images/products/front-windshield-tint.webp",
+      "size": 151802,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Technician fitting a large transparent tint film across a front windshield, viewed from the hood."
+    },
+    {
+      "slug": "full-body-ppf",
+      "file": "/images/products/full-body-ppf.webp",
+      "size": 249536,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Whole graphite sports car being covered in clear paint protection film by TWO technicians wearing black work clothes, large translucent wet film edges visible at front and side, spacious professional studio."
+    },
+    {
+      "slug": "full-front-ppf",
+      "file": "/images/products/full-front-ppf.webp",
+      "size": 204012,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Head-on view of graphite car with front bumper, hood and side mirrors receiving transparent paint protection film, lifted film edges and technician gloved hands near bumper."
+    },
+    {
+      "slug": "full-hd-3-channel-dashcam",
+      "file": "/images/products/full-hd-3-channel-dashcam.webp",
+      "size": 87916,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Generic front and rear dashcam pair laid neatly on a dark workbench with red rim light, clear product still life."
+    },
+    {
+      "slug": "haven-4k-3-channel-dashcam",
+      "file": "/images/products/haven-4k-3-channel-dashcam.webp",
+      "size": 60130,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Sleek generic premium dashcam close-up installed on a windshield, crisp beautiful lens reflection, no resolution labels."
+    },
+    {
+      "slug": "hd-3-channel-dashcam",
+      "file": "/images/products/hd-3-channel-dashcam.webp",
+      "size": 82896,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Compact generic dashcam mounted behind the rear-view mirror, city road ahead at dusk, realistic mounting."
+    },
+    {
+      "slug": "headlight-restoration",
+      "file": "/images/products/headlight-restoration.webp",
+      "size": 189882,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Single headlight mid-restoration, left half yellow and cloudy, right half polished crystal clear, natural transition on ONE real headlight, no split collage."
+    },
+    {
+      "slug": "headlight-tint",
+      "file": "/images/products/headlight-tint.webp",
+      "size": 145598,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Headlight with smoked dark transparent tint film applied on a graphite sports car, detailed headlight lens still visible."
+    },
+    {
+      "slug": "individual-panel-ppf",
+      "file": "/images/products/individual-panel-ppf.webp",
+      "size": 83036,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Extreme close-up of gloved hand carefully applying a small precut transparent protection film inside car door handle cup, single panel and clean realistic film edges."
+    },
+    {
+      "slug": "lingdu-ld02-5k",
+      "file": "/images/products/lingdu-ld02-5k.webp",
+      "size": 93210,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Premium generic dashcam with a small GPS module beside it on a dark surface, clean technical product still life."
+    },
+    {
+      "slug": "lingdu-v630-4k",
+      "file": "/images/products/lingdu-v630-4k.webp",
+      "size": 88728,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Generic flat-screen dashcam showing a live road view on its screen, mounted on windshield glass, no readable interface text."
+    },
+    {
+      "slug": "lock-lug-nut-key-removal",
+      "file": "/images/products/lock-lug-nut-key-removal.webp",
+      "size": 103454,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Specialised wheel-lock extractor socket fitted over a locking wheel nut on a black alloy wheel, gloved hand and tool visible, precise mechanical close-up."
+    },
+    {
+      "slug": "logo-blackout",
+      "file": "/images/products/logo-blackout.webp",
+      "size": 80298,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Close-up of completely blacked-out abstract unbranded front badge on graphite car grille, no identifiable or readable brand."
+    },
+    {
+      "slug": "lug-nut-removal",
+      "file": "/images/products/lug-nut-removal.webp",
+      "size": 144410,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Detailed close-up of an extraction socket engaging a rusty lug nut on an old steel wheel, black-gloved hand holding breaker tool, visible rust texture."
+    },
+    {
+      "slug": "mirror-dashcam",
+      "file": "/images/products/mirror-dashcam.webp",
+      "size": 60130,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Wide rear-view mirror display showing a rear-camera road feed inside a dark cabin, realistic screen and mounting."
+    },
+    {
+      "slug": "mobile-puncture-service",
+      "file": "/images/products/mobile-puncture-service.webp",
+      "size": 156976,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Technician repairing a tyre beside a dark service van on a wide safe roadside shoulder at dusk, compact service tools and small safety cone, no text on van."
+    },
+    {
+      "slug": "nano-ceramic-tint",
+      "file": "/images/products/nano-ceramic-tint.webp",
+      "size": 97558,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Graphite luxury sedan with deep dark tinted windows, full side profile, clean dramatic studio reflections."
+    },
+    {
+      "slug": "panoramic-roof-tint",
+      "file": "/images/products/panoramic-roof-tint.webp",
+      "size": 97796,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Overhead view of a panoramic glass roof on a graphite SUV, one half tinted dark, precise realistic roof structure."
+    },
+    {
+      "slug": "portable-carplay",
+      "file": "/images/products/portable-carplay.webp",
+      "size": 109010,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Portable wireless CarPlay-style screen mounted on dashboard showing a clean navigation map, generic map icons, no brand marks or readable text."
+    },
+    {
+      "slug": "starlight-headliner",
+      "file": "/images/products/starlight-headliner.webp",
+      "size": 104486,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Luxury car roof lining with many tiny white fibre-optic starlight points, upward interior angle showing roof and edges of seats, dark cabin."
+    },
+    {
+      "slug": "sun-strip",
+      "file": "/images/products/sun-strip.webp",
+      "size": 71070,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Dark tint strip along the top of a front windshield, interior view looking out through glass, strip clearly visible."
+    },
+    {
+      "slug": "tail-light-tint",
+      "file": "/images/products/tail-light-tint.webp",
+      "size": 66286,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Smoked tail light glowing deep red on a black sports car at night, glossy dark tinted lens."
+    },
+    {
+      "slug": "tint-removal",
+      "file": "/images/products/tint-removal.webp",
+      "size": 120738,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Gloved hand peeling old bubbled purple tint off a car side window, lifted film corner and glass clearly visible."
+    },
+    {
+      "slug": "tire-change",
+      "file": "/images/products/tire-change.webp",
+      "size": 159604,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Black performance tyre being mounted onto rim on a professional tyre-changer machine, machine mounting head at rim edge, accurate mechanical detail."
+    },
+    {
+      "slug": "tire-puncture-repair",
+      "file": "/images/products/tire-puncture-repair.webp",
+      "size": 112756,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Close-up of black-gloved hands inserting a tyre plug tool into a small puncture in tire tread, tire repair kit nearby, accurate repair action."
+    },
+    {
+      "slug": "tire-rotation",
+      "file": "/images/products/tire-rotation.webp",
+      "size": 149064,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Graphite car supported securely on workshop lift, four wheels removed and arranged on floor beside their corresponding positions for tire rotation, coherent realistic scene."
+    },
+    {
+      "slug": "tire-sealant",
+      "file": "/images/products/tire-sealant.webp",
+      "size": 106038,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Close-up of black-gloved hands injecting tyre sealant from a plain unlabelled squeeze bottle through a valve stem using a small hose, realistic mounted tire."
+    },
+    {
+      "slug": "tire-swap",
+      "file": "/images/products/tire-swap.webp",
+      "size": 123892,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Technician lifting a mounted alloy wheel onto a raised car hub, impact wrench nearby, realistic workshop service scene."
+    },
+    {
+      "slug": "truck-van-tire-service",
+      "file": "/images/products/truck-van-tire-service.webp",
+      "size": 113426,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Large black van tyre being serviced by technician in a clean bay beside a commercial graphite van, correct large wheel proportions."
+    },
+    {
+      "slug": "vinyl-wraps",
+      "file": "/images/products/vinyl-wraps.webp",
+      "size": 101568,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Technician carefully stretching satin-red vinyl wrap over a graphite car door with a heat gun, accurate wrap folds and tool distance."
+    },
+    {
+      "slug": "wheel-balancing",
+      "file": "/images/products/wheel-balancing.webp",
+      "size": 97816,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Wheel mounted on a balancing machine spindle, subtle motion blur implying spin, digital display glowing without readable text, realistic workshop equipment."
+    },
+    {
+      "slug": "wheel-lights",
+      "file": "/images/products/wheel-lights.webp",
+      "size": 120064,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Car wheel with a glowing red LED ring light inside the wheel under the arch, realistic installation, night workshop."
+    },
+    {
+      "slug": "wheel-painting",
+      "file": "/images/products/wheel-painting.webp",
+      "size": 143104,
+      "width": 1600,
+      "height": 900,
+      "quality": 85,
+      "prompt": "Use case photorealistic-natural. Single photorealistic premium automotive product/service photograph, landscape 16:9 composition, subject comfortably framed for 1600x900 crop. Dark graphite/black professional studio or workshop, clean reflections, restrained racing-red accent lighting, black-gloved technician hands when working. Realistic car anatomy and equipment, shallow depth of field, cinematic contrast. No text, no logos, no brand names, no watermark, no UI, no collage. Consistent graphite sports sedan/SUV family. Subject: Wheel being professionally spray-painted gloss black inside ventilated automotive paint booth, tyre carefully masked, operator wearing appropriate respirator and protection."
+    }
+  ]
+}

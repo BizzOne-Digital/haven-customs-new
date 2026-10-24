@@ -6,6 +6,7 @@
 import { VEHICLE_TYPES } from "./constants";
 
 import { IMG } from "./images";
+import PRODUCT_IMAGES from "./product-images.json";
 export { IMG } from "./images";
 
 const ALL = [...VEHICLE_TYPES];
@@ -86,7 +87,7 @@ const TIRE_FAQ: Faq[] = [
 const MON_THU = "Available Monday – Thursday only. Please book ahead.";
 const APPT = "By appointment — book online or call the shop.";
 
-export const SEED_PRODUCTS: SeedProduct[] = [
+const BASE_PRODUCTS: SeedProduct[] = [
   /* ───────── WINDOW TINT ───────── */
   {
     slug: "ceramic-tint", name: "Ceramic Tint", category: "window-tint", isFeatured: true,
@@ -449,6 +450,12 @@ export const SEED_PRODUCTS: SeedProduct[] = [
     shortDescription: "Remove locking lug nuts when the key is broken or missing.", longDescription: "Removal of locking lug nuts when the key is broken.",
     vehicleTypes: ALL, image: IMG.wheel, imageAlt: "Locking wheel nut", internalPrice: "$20" },
 ];
+
+/** A dedicated photo in public/images/products/<slug>.* (see scripts/sync-product-images.mjs) replaces the shared category image. */
+export const SEED_PRODUCTS: SeedProduct[] = BASE_PRODUCTS.map((p) => {
+  const own = (PRODUCT_IMAGES as Record<string, string>)[p.slug];
+  return own ? { ...p, image: own, imageAlt: p.name } : p;
+});
 
 export type SeedOffer = {
   slug: string;
