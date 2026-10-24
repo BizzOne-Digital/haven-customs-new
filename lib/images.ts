@@ -13,7 +13,8 @@ export const IMG = {
   "precisionCar": "/images/haven/precision-car.webp",
   "tailLight": "/images/haven/tail-light.webp",
   "blackCar": "/images/haven/chrome-delete.webp",
-  "graphite": "/images/haven/logo-blackout.webp"
+  "graphite": "/images/haven/logo-blackout.webp",
+  "exterior": "/images/haven/exterior-custom.webp"
 } as const;
 
 const LEGACY_LOCAL: Record<string, string> = {

@@ -108,7 +108,7 @@ export default function InquiriesManager() {
         <label className="relative">
           <span className="sr-only">Search</span>
           <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-steel" aria-hidden />
-          <input value={q} onChange={(e) => { setQ(e.target.value); setPage(1); }} placeholder="Name, phone, email, service, vehicle…" className="field pl-9" />
+          <input value={q} onChange={(e) => { setQ(e.target.value); setPage(1); }} placeholder="Name, phone, email, service, vehicle…" className="field pl-10!" />
         </label>
         <select value={status} onChange={(e) => { setStatus(e.target.value); setPage(1); }} className="field" aria-label="Status">
           <option value="">All statuses</option>

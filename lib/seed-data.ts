@@ -27,7 +27,7 @@ export const SEED_CATEGORIES: SeedCategory[] = [
     description: "Portable Apple CarPlay / Android Auto screens, backup cameras and clean installations." },
   { slug: "lighting", name: "Lighting", icon: "lightbulb", image: IMG.light,
     description: "Headlight and tail light tint, headlight restoration and custom lighting upgrades." },
-  { slug: "exterior", name: "Exterior Customization", icon: "paintbrush", image: IMG.decal,
+  { slug: "exterior", name: "Exterior Customization", icon: "paintbrush", image: IMG.exterior,
     description: "Chrome delete, logo blackout, wraps, wheel and caliper painting." },
   { slug: "paint-protection", name: "Paint Protection", icon: "shield", image: IMG.ppf,
     description: "XPEL paint protection film and multi-level ceramic coating." },

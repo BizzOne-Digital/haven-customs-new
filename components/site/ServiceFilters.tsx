@@ -50,7 +50,7 @@ export default function ServiceFilters({ categories }: { categories: Cat[] }) {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search tint, dashcam, PPF, tires…"
-            className="field pl-9"
+            className="field pl-10!"
           />
         </label>
         <label className="md:w-64">
