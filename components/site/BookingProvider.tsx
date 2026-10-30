@@ -68,10 +68,10 @@ export default function BookingProvider({
         onClose={close}
         onClick={(e) => e.target === dialogRef.current && close()}
         aria-labelledby="booking-title"
-        className="m-auto w-[min(100vw-1.5rem,880px)] max-h-[92vh] overflow-hidden rounded-[3px] bg-white p-0 shadow-2xl backdrop:bg-ink/60"
+        className="m-auto h-[92dvh] w-[min(100vw-1.5rem,1080px)] max-h-[92dvh] overflow-hidden rounded-[3px] bg-white p-0 shadow-2xl backdrop:bg-ink/60"
       >
         {state.open && (
-          <div className="flex max-h-[92vh] flex-col">
+          <div className="flex h-full flex-col">
             <div className="flex items-start justify-between gap-4 border-b border-mist px-5 py-4 sm:px-7">
               <div>
                 <p className="eyebrow">Book appointment</p>
@@ -84,9 +84,9 @@ export default function BookingProvider({
                 <X className="h-5 w-5" aria-hidden />
               </button>
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto">
+            <div className={`min-h-0 flex-1 overflow-y-auto ${url ? "bg-black" : ""}`}>
               {url ? (
-                <GhlCalendar src={url} idSuffix="modal" className="min-h-[70vh]" />
+                <GhlCalendar src={url} idSuffix="modal" scrollable className="block h-full" />
               ) : (
                 <BookingFallback phone={phone} phoneHref={phoneHref} slug={state.ctx?.slug} onNavigate={close} />
               )}
@@ -131,7 +131,18 @@ export function BookingFallback({
 }
 
 /** GHL booking widget iframe, matching GHL's own embed code (id = calendar id + suffix). */
-export function GhlCalendar({ src, idSuffix, className = "" }: { src: string; idSuffix: string; className?: string }) {
+export function GhlCalendar({
+  src,
+  idSuffix,
+  scrollable = false,
+  className = "",
+}: {
+  src: string;
+  idSuffix: string;
+  /** true inside fixed-height containers (the modal); false lets form_embed.js size it to its content */
+  scrollable?: boolean;
+  className?: string;
+}) {
   const calendarId = new URL(src).pathname.split("/").filter(Boolean).pop() ?? "ghl";
   return (
     <iframe
@@ -140,8 +151,8 @@ export function GhlCalendar({ src, idSuffix, className = "" }: { src: string; id
       id={`${calendarId}_${idSuffix}`}
       title="Book an appointment with Haven Customs"
       allow="payment"
-      scrolling="no"
-      className={`w-full overflow-hidden border-0 ${className}`}
+      scrolling={scrollable ? "yes" : "no"}
+      className={`w-full border-0 ${scrollable ? "" : "overflow-hidden"} ${className}`}
     />
   );
 }
