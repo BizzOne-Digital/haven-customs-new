@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Clock, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import PageHero from "@/components/site/PageHero";
 import QuoteForm from "@/components/site/QuoteForm";
+import { GhlCalendar } from "@/components/site/BookingProvider";
+import { getBookingConfig } from "@/lib/integrations";
 import { NOT_OFFERED } from "@/lib/constants";
 import { getActiveProductOptions, getPage, getSettings } from "@/lib/queries";
 
@@ -18,28 +20,41 @@ export default async function ContactPage({ searchParams }: { searchParams: SP }
   const sp = await searchParams;
   const pre = (Array.isArray(sp.service) ? sp.service : (sp.service ?? "").split(",")).filter(Boolean).slice(0, 10);
   const [page, s, options] = await Promise.all([getPage("contact"), getSettings(), getActiveProductOptions()]);
+  const booking = getBookingConfig().defaultUrl;
 
   return (
     <>
       <PageHero eyebrow="Contact us" heading={page.heading} accent={page.headingAccent} intro={page.intro} />
       <section className="bg-white py-12 lg:py-16">
         <div className="mx-auto grid max-w-[1320px] gap-12 px-4 sm:px-6 lg:grid-cols-[1.25fr_0.75fr] lg:px-10">
-          <div id="quote">
-            <h2 className="heading text-3xl">Request a quote</h2>
-            <p className="mb-6 mt-2 text-sm text-steel">Fields marked * are required.</p>
-            {options.length > 0 ? (
+          {options.length > 0 ? (
+            <div id="quote">
+              <h2 className="heading text-3xl">Request a quote</h2>
+              <p className="mb-6 mt-2 text-sm text-steel">Fields marked * are required.</p>
               <QuoteForm options={options} preselected={pre} />
-            ) : (
-              // Catalog unavailable (e.g. database offline) — don't show a form that can't be submitted.
-              <div className="border-l-2 border-race bg-pearl p-6 text-sm text-graphite">
-                <p className="font-semibold text-ink">Online quote requests are temporarily unavailable.</p>
-                <p className="mt-2">Please call the shop and our team will help you right away.</p>
-                <a href={s.phoneHref} className="btn btn-red mt-4">
+            </div>
+          ) : (
+            // Quote form needs the database; until it's connected, offer the GHL booking calendar instead.
+            <div id="quote">
+              <h2 className="heading text-3xl">Book a time with us</h2>
+              <p className="mb-6 mt-2 text-sm text-steel">
+                Pick a time that works for you, or call{" "}
+                <a href={s.phoneHref} className="font-semibold text-ink hover:text-race">
+                  {s.phone}
+                </a>{" "}
+                and our team will help right away.
+              </p>
+              {booking ? (
+                <div className="overflow-hidden border border-cloud bg-black">
+                  <GhlCalendar src={booking} idSuffix="contact" className="min-h-[760px]" />
+                </div>
+              ) : (
+                <a href={s.phoneHref} className="btn btn-red">
                   <Phone className="h-4 w-4" aria-hidden /> Call {s.phone}
                 </a>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
           <aside data-reveal="right" className="space-y-8">
             <div className="border border-cloud bg-pearl p-6">
               <h2 className="heading text-2xl">Visit the shop</h2>
