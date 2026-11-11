@@ -4,6 +4,7 @@ import SafeImage from "@/components/ui/SafeImage";
 import Arrow from "@/components/site/Arrow";
 import BookButton from "@/components/site/BookButton";
 import ServiceCard from "@/components/site/ServiceCard";
+import ReviewsWidget from "@/components/site/ReviewsWidget";
 import type { PublicProduct } from "@/lib/queries";
 
 export function TrustStrip() {
@@ -197,8 +198,8 @@ export function FinalCta({ heading, text }: { heading: string; text: string }) {
   );
 }
 
+/** Live review widget (ReputationHub), plus any reviews approved in Admin → Pages. */
 export function Reviews({ items }: { items: { name: string; text: string; service?: string }[] }) {
-  if (!items.length) return null;
   return (
     <section className="bg-pearl py-14 lg:py-20">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
@@ -206,6 +207,10 @@ export function Reviews({ items }: { items: { name: string; text: string; servic
         <h2 className="heading mt-3 text-[clamp(2.4rem,5vw,3.6rem)]">
           WHAT DRIVERS <span className="text-race">SAY.</span>
         </h2>
+        <div data-reveal className="mt-10">
+          <ReviewsWidget />
+        </div>
+        {items.length > 0 && (
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
           {items.slice(0, 6).map((r, i) => (
             <li key={i} className="border-l-2 border-race bg-white p-6">
@@ -215,6 +220,7 @@ export function Reviews({ items }: { items: { name: string; text: string; servic
             </li>
           ))}
         </ul>
+        )}
       </div>
     </section>
   );

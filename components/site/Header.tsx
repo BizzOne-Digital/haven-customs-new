@@ -58,7 +58,7 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header className={`sticky top-0 z-40 border-b border-white/10 bg-[#0d0d0f]/95 backdrop-blur transition-shadow ${scrolled ? "shadow-[0_6px_20px_rgba(0,0,0,0.35)]" : ""}`}>
+    <header className={`sticky top-0 z-40 border-b border-white/10 bg-[#0d0d0f] transition-shadow ${scrolled ? "shadow-[0_6px_20px_rgba(0,0,0,0.35)]" : ""}`}>
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-white focus:px-3 focus:py-2">
         Skip to content
       </a>
@@ -77,6 +77,8 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          {/* Compact "Book" on phones, full label from sm up */}
+          <BookButton className="btn btn-red min-h-[40px]! px-3! text-xs! sm:hidden!">Book</BookButton>
           <div className="hidden sm:block">
             <BookButton />
           </div>
