@@ -33,7 +33,7 @@ export const SEED_CATEGORIES: SeedCategory[] = [
   { slug: "paint-protection", name: "Paint Protection", icon: "shield", image: IMG.ppf,
     description: "XPEL paint protection film and multi-level ceramic coating." },
   { slug: "tires", name: "Tire Services", icon: "circle-dot", image: IMG.tire,
-    description: "Tire swaps, changes, rotation and balancing for sedans, SUVs, trucks and vans." },
+    description: "Tire installation, seasonal tire swaps, rotation and balancing for sedans, SUVs, trucks and vans." },
   { slug: "repairs", name: "Repairs", icon: "wrench", image: IMG.wheel,
     description: "Puncture repair, valves, bent steel rims, sealant and lug nut removal." },
 ];
@@ -392,36 +392,36 @@ const BASE_PRODUCTS: SeedProduct[] = [
   /* ───────── TIRES ───────── */
   {
     slug: "tire-swap", name: "Tire Swap (On-Rims)", category: "tires", isFeatured: true, bookingNote: APPT,
-    shortDescription: "Seasonal swap for tires already mounted on rims. Balancing available as an add-on.",
-    longDescription: "A swap is for tires that are already mounted on rims. Balancing is not included but can be added.",
+    shortDescription: "Seasonal tire installation for tires already on rims, in Scarborough. Balancing available as an add-on.",
+    longDescription: "Tire swap is our quickest tire installation service, for tires that are already mounted on rims — ideal for seasonal winter and summer changeovers. We remove your current wheels and install your other set. Balancing is not included but can be added. Looking for tire installation near you in Scarborough? Book online or call the shop; ask about same-day tire installation when you call.",
     options: ["Sedan", "Midsize SUV", "Extended SUV", "Balancing add-on"], vehicleTypes: ALL,
     faqs: TIRE_FAQ, image: IMG.tire, imageAlt: "Technician working on a car tire",
     internalPrice: "Sedan $40 · Midsize $50 · Extended $60 · balancing +$20",
   },
   {
     slug: "tire-change", name: "Tire Change (Off-Rims)", category: "tires", bookingNote: APPT,
-    shortDescription: "Mounting tires that are not on rims — balancing included.",
-    longDescription: "A change is for tires that are not on rims and need to be mounted. Balancing is included.",
+    shortDescription: "Full tire installation: mounting new tires onto your rims, with balancing included.",
+    longDescription: "Tire change is our full tire installation service for tires that are not on rims yet. We mount the tires onto your rims, balance them and install the wheels on your vehicle. Bringing new tires? We take care of the installation. Need tires and installation together? Call us and our team will go through your options.",
     features: ["Balancing included"], options: ["Sedan", "Midsize SUV", "Extended SUV"], vehicleTypes: ALL,
     faqs: TIRE_FAQ, image: IMG.tire, imageAlt: "Tire being mounted", internalPrice: "Sedan $79 · Midsize $89 · Extended $99",
   },
   {
     slug: "tire-rotation", name: "Tire Rotation", category: "tires", bookingNote: APPT,
     shortDescription: "On-rims or off-rims tire rotation for sedans and SUVs.",
-    longDescription: "Rotate your tires to even out wear. Available for on-rims and off-rims setups.",
+    longDescription: "Rotate your tires to even out wear and get more life from each set. Available for on-rims and off-rims setups, and easy to add to a seasonal tire installation.",
     options: ["On-rims", "Off-rims"], vehicleTypes: ALL, faqs: TIRE_FAQ, image: IMG.tire, imageAlt: "Car wheel and tire",
     internalPrice: "Sedan on $40 / off $80 · SUV on $50 / off $100",
   },
   {
     slug: "wheel-balancing", name: "Wheel Balancing", category: "tires",
     shortDescription: "Wheel balancing priced per tire.",
-    longDescription: "Balancing for a smoother ride and even tire wear, priced per tire.",
+    longDescription: "Balancing for a smoother ride and even tire wear, priced per tire. Recommended with every tire installation.",
     vehicleTypes: ALL, faqs: TIRE_FAQ, image: IMG.tire, imageAlt: "Wheel balancing", internalPrice: "$15 per tire",
   },
   {
     slug: "truck-van-tire-service", name: "Truck & Van Tire Service", category: "tires", bookingNote: APPT,
     shortDescription: "Tire services for trucks and vans — by appointment.",
-    longDescription: "We handle tire work for trucks and vans by appointment. Book online or contact us with your vehicle details.",
+    longDescription: "We handle tire installation and tire work for trucks and vans by appointment. Book online or contact us with your vehicle details.",
     vehicleTypes: ["Midsize SUV / Truck", "Extended SUV / Minivan"], faqs: TIRE_FAQ, image: IMG.tire, imageAlt: "Truck tire service",
   },
 

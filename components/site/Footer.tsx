@@ -5,6 +5,7 @@ import type { PublicSettings } from "@/lib/queries";
 
 const LINKS = [
   { href: "/services", label: "All Services" },
+  { href: "/tire-installation", label: "Tire Installation" },
   { href: "/offers", label: "Offers" },
   { href: "/booking", label: "Book Appointment" },
   { href: "/gallery", label: "Gallery" },
