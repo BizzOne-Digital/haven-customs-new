@@ -4,7 +4,7 @@ import PageHero from "@/components/site/PageHero";
 import Arrow from "@/components/site/Arrow";
 
 export const metadata: Metadata = {
-  title: "Brands",
+  title: { absolute: "Film, Dash Cam & Tire Brands | Haven Customs" },
   description: "The film, coating, dashcam and tire brands we work with at Haven Customs, Scarborough.",
   alternates: { canonical: "/brands" },
 };
@@ -41,6 +41,7 @@ export default function BrandsPage() {
     <>
       <PageHero
         eyebrow="Brands"
+        h1="Film, Dash Cam & Tire Brands at Haven Customs"
         heading="QUALITY BRANDS"
         accent="WE TRUST."
         intro="We work with established film, coating, camera and tire brands. Brand names are shown for product identification only."

@@ -77,6 +77,9 @@ export default function Header({ phone, phoneHref }: { phone: string; phoneHref:
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <a href={phoneHref} className="mr-3 hidden items-center gap-2 text-sm font-semibold text-white/85 hover:text-race xl:flex">
+            <Phone className="h-4 w-4 text-race" aria-hidden /> {phone}
+          </a>
           {/* Compact "Book" on phones, full label from sm up */}
           <BookButton className="btn btn-red min-h-[40px]! px-3! text-xs! sm:hidden!">Book</BookButton>
           <div className="hidden sm:block">

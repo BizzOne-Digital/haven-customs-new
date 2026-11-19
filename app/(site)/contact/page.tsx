@@ -9,8 +9,8 @@ import { getActiveProductOptions, getPage, getSettings } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "Contact & Quotes",
-  description: "Request a quote for tint, PPF, dashcams, CarPlay, lighting or tire services. 124 Production Dr, Scarborough. Call +1 416-431-5255.",
+  title: { absolute: "Contact Haven Customs | Scarborough Tint & Tire Shop" },
+  description: "Visit Haven Customs at 124 Production Dr, Scarborough, ON. Call (416) 431-5255 or book online for tint, PPF, ceramic coating and tires.",
   alternates: { canonical: "/contact" },
 };
 
@@ -24,7 +24,7 @@ export default async function ContactPage({ searchParams }: { searchParams: SP }
 
   return (
     <>
-      <PageHero eyebrow="Contact us" heading={page.heading} accent={page.headingAccent} intro={page.intro} />
+      <PageHero eyebrow="Contact us" h1="Contact Haven Customs in Scarborough" heading={page.heading} accent={page.headingAccent} intro={page.intro} />
       <section className="bg-white py-12 lg:py-16">
         <div className="mx-auto grid max-w-[1320px] gap-12 px-4 sm:px-6 lg:grid-cols-[1.25fr_0.75fr] lg:px-10">
           {options.length > 0 ? (

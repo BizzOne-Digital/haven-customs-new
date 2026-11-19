@@ -24,7 +24,7 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
       <div aria-hidden className="diag-accent pointer-events-none absolute inset-0" />
       <div className="relative mx-auto grid max-w-[1320px] gap-8 px-4 pb-12 pt-8 sm:px-6 sm:pt-10 lg:grid-cols-[1fr_300px] lg:gap-6 lg:px-10 lg:pb-16 lg:pt-6">
         <div className="relative [--fs:clamp(4.4rem,19.5vw,9.5rem)] lg:[--fs:min(13.6vw,14.25rem)]">
-          <h1 className="relative">
+          <p className="relative">
             <span className="display hero-in-left relative z-0 block text-race" style={{ fontSize: "var(--fs)" }}>
               {line1}
             </span>
@@ -34,7 +34,7 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
             >
               {line2}
             </span>
-          </h1>
+          </p>
 
           {/* Vehicle layer — overlaps both lines */}
           <div
@@ -80,7 +80,7 @@ export default function Hero({ line1, line2, tagline, text, image, imageAlt, mod
             <span className="lg:hidden">{tagline.replace(/\n/g, " ")}</span>
             <span className="hidden lg:inline">{tagline}</span>
           </p>
-          <p className="mt-5 max-w-[20rem] text-[1.05rem] leading-relaxed lg:text-[1.2rem] text-graphite">{text}</p>
+          <h1 className="mt-5 max-w-[20rem] text-[1.05rem] font-normal leading-relaxed lg:text-[1.2rem] text-graphite">{text}</h1>
           <Link href="/contact" className="btn btn-red mt-7 min-h-[54px]! px-9! text-base!">
             Get a Quote <Arrow />
           </Link>

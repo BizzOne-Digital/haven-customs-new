@@ -11,7 +11,7 @@ import { getCategories, getProducts } from "@/lib/queries";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: { absolute: "Auto Services in Scarborough, ON | Haven Customs" },
   description:
     "Window tint, PPF, ceramic coating, dashcams, CarPlay, lighting, chrome delete and tire services in Scarborough. Contact us for a quote.",
   alternates: { canonical: "/services" },
@@ -34,6 +34,7 @@ export default async function ServicesPage({ searchParams }: { searchParams: SP 
     <>
       <PageHero
         eyebrow="Our services"
+        h1="Our Auto Services in Scarborough"
         heading="EVERYTHING WE"
         accent="DO."
         intro="Browse every service we offer. Pricing depends on your vehicle and options — send us a request and our team will get back to you with a quote."

@@ -98,7 +98,8 @@ export function OffersTeaser({ offers }: { offers: PublicOffer[] }) {
 
 /* ───────────── FAQ ───────────── */
 
-const FAQS = [
+/** Also used for the homepage FAQPage schema, so the markup matches what is visible. */
+export const HOME_FAQS = [
   {
     q: "Why don't you list prices?",
     a: "Pricing depends on your vehicle size and the options you choose. Send a quote request or call us and our team will give you exact details.",
@@ -134,7 +135,7 @@ export function HomeFaq() {
           </Link>
         </div>
         <ul className="divide-y divide-cloud border-y border-cloud">
-          {FAQS.map((f) => (
+          {HOME_FAQS.map((f) => (
             <li key={f.q}>
               <details className="group py-5">
                 <summary className="font-cond flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold text-ink">

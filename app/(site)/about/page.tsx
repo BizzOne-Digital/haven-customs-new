@@ -9,8 +9,8 @@ import { getPage, getSettings } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "About",
-  description: "Haven Customs is an automotive upgrade shop in Scarborough, ON — tint, protection, dashcams, CarPlay, lighting and tires.",
+  title: { absolute: "About Haven Customs | Tint & Tire Shop in Scarborough" },
+  description: "Meet Haven Customs, a Scarborough tint and tire shop for window tint, PPF, ceramic coating, dash cams, lighting and tires. Learn about our team and services.",
   alternates: { canonical: "/about" },
 };
 
@@ -18,7 +18,7 @@ export default async function AboutPage() {
   const [a, s] = await Promise.all([getPage("about"), getSettings()]);
   return (
     <>
-      <PageHero eyebrow={a.headingAccent} heading={a.heading} intro={a.intro} />
+      <PageHero eyebrow={a.headingAccent} h1="About Haven Customs — Tint & Tire Shop in Scarborough" heading={a.heading} intro={a.intro} />
       <section className="bg-white py-12 lg:py-20">
         <div className="mx-auto grid max-w-[1320px] items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
           <div data-reveal="left" className="relative aspect-[4/3] overflow-hidden bg-cloud">

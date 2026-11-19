@@ -7,7 +7,7 @@ import Arrow from "@/components/site/Arrow";
 import BookButton from "@/components/site/BookButton";
 import ServiceCard from "@/components/site/ServiceCard";
 import { getProductBySlug, getRelatedProducts, getSettings } from "@/lib/queries";
-import { serviceJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, JsonLd, serviceJsonLd } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 type Params = Promise<{ slug: string }>;
@@ -15,9 +15,13 @@ type Params = Promise<{ slug: string }>;
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const p = await getProductBySlug((await params).slug).catch(() => null);
   if (!p) return { title: "Service not found" };
+  // "[Service] in Scarborough, ON | Haven Customs" — kept to 60 characters where possible.
+  const full = `${p.name} in Scarborough, ON | Haven Customs`;
+  const title = full.length <= 60 ? full : `${p.name} | Scarborough | Haven Customs`;
+  const desc = `${p.shortDescription.replace(/\.$/, "")}. ${p.name} in Scarborough at Haven Customs — get a quote or book online.`;
   return {
-    title: `${p.name}${p.category ? ` — ${p.category.name}` : ""}`,
-    description: p.shortDescription || `${p.name} at Haven Customs, Scarborough.`,
+    title: { absolute: title },
+    description: desc.length <= 160 ? desc : `${desc.slice(0, 157).replace(/\s+\S*$/, "")}…`,
     alternates: { canonical: `/services/${p.slug}` },
     openGraph: { title: p.name, description: p.shortDescription, images: p.images[0]?.url.startsWith("/uploads/") ? [] : p.images.slice(0, 1).map((i) => i.url) },
   };
@@ -39,7 +43,17 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd(p)) }} />
+      <JsonLd
+        data={[
+          serviceJsonLd(p),
+          faqJsonLd(faqs),
+          breadcrumbJsonLd([
+            { name: "Services", path: "/services" },
+            ...(p.category ? [{ name: p.category.name, path: `/services?category=${p.category.slug}` }] : []),
+            { name: p.name },
+          ]),
+        ]}
+      />
       <section className="relative overflow-hidden bg-[linear-gradient(100deg,#ffffff_0%,#f1f1f2_60%,#e7e8ea_100%)]">
         <div aria-hidden className="diag-accent pointer-events-none absolute inset-0" />
         <div className="relative mx-auto grid max-w-[1320px] gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12 lg:px-10 lg:py-14">
@@ -53,7 +67,10 @@ export default async function ServiceDetailPage({ params }: { params: Params }) 
                 </>
               )}
             </nav>
-            <h1 className="display mt-4 text-[clamp(2.8rem,7vw,5.5rem)] text-ink">{p.name}</h1>
+            <h1 className="display mt-4 text-[clamp(2.8rem,7vw,5.5rem)] text-ink">
+              {p.name}
+              <span className="mt-2 block font-sans text-base font-semibold not-italic tracking-[0.2em] text-race">in Scarborough</span>
+            </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-graphite">{p.shortDescription}</p>
             {p.bookingNote && (
               <p className="mt-4 flex items-start gap-2 border-l-2 border-race bg-white px-4 py-3 text-sm font-medium text-ink">

@@ -4,6 +4,7 @@ import BookingProvider from "@/components/site/BookingProvider";
 import RevealOnScroll, { MOTION_BOOT } from "@/components/site/RevealOnScroll";
 import { getBookingConfig } from "@/lib/integrations";
 import { getSettings } from "@/lib/queries";
+import { JsonLd, localBusinessJsonLd } from "@/lib/seo";
 
 // Settings (phone, hours, socials) are admin-editable, so every public page renders per request.
 export const dynamic = "force-dynamic";
@@ -14,6 +15,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
     <BookingProvider config={getBookingConfig()} phone={settings.phone} phoneHref={settings.phoneHref}>
       {/* Runs before the page paints so revealed elements never flash. */}
       <script dangerouslySetInnerHTML={{ __html: MOTION_BOOT }} />
+      <JsonLd data={localBusinessJsonLd(settings)} />
       <Header phone={settings.phone} phoneHref={settings.phoneHref} />
       <main id="main">{children}</main>
       <Footer s={settings} />

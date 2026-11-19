@@ -8,7 +8,7 @@ import { getGallery, getSettings } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "Gallery",
+  title: { absolute: "Tint, PPF & Custom Work Gallery | Haven Customs" },
   description: "Tint, protection and custom upgrade work from the Haven Customs shop in Scarborough.",
   alternates: { canonical: "/gallery" },
 };
@@ -17,7 +17,7 @@ export default async function GalleryPage() {
   const [items, s] = await Promise.all([getGallery(), getSettings()]);
   return (
     <>
-      <PageHero eyebrow="Gallery" heading="RECENT" accent="WORK." intro="A look at vehicles that have come through the shop." />
+      <PageHero eyebrow="Gallery" h1="Window Tint, PPF & Custom Work Gallery — Scarborough" heading="RECENT" accent="WORK." intro="A look at vehicles that have come through the shop." />
       <section className="bg-white py-12 lg:py-16">
         <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
           {items.length ? (

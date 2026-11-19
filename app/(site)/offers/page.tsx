@@ -8,7 +8,7 @@ import { getActiveOffers } from "@/lib/queries";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
-  title: "Current Offers",
+  title: { absolute: "Current Offers | Haven Customs Scarborough" },
   description: "Limited-time offers on tint, dashcams and more at Haven Customs, Scarborough. Contact us for details.",
   alternates: { canonical: "/offers" },
 };
@@ -19,6 +19,7 @@ export default async function OffersPage() {
     <>
       <PageHero
         eyebrow="Offers"
+        h1="Current Offers at Haven Customs in Scarborough"
         heading="CURRENT"
         accent="OFFERS."
         intro="Limited-time offers change through the year. Contact us for details and availability for your vehicle."

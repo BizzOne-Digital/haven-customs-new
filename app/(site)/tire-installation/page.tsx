@@ -18,12 +18,13 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: { absolute: "Tire Installation Near Me in Scarborough | Haven Customs" },
   description:
-    "Tire installation in Scarborough for sedans, SUVs, trucks and vans. Seasonal tire swaps, tire mounting and balancing. Ask about same-day tire installation — call or book online.",
+    "Tire installation in Scarborough for cars, SUVs, trucks and vans: seasonal swaps, mounting and balancing. Ask about same-day tire installation.",
   alternates: { canonical: "/tire-installation" },
   openGraph: {
     title: "Tire Installation in Scarborough",
     description: "Seasonal tire swaps, tire mounting and balancing. Call or book online.",
     url: "/tire-installation",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
 
@@ -86,7 +87,7 @@ export default async function TireInstallationPage() {
           <div>
             <p className="eyebrow">Tire installation · Scarborough</p>
             <h1 className="display mt-3 text-[clamp(3rem,7.5vw,6rem)] text-ink">
-              TIRE INSTALLATION <span className="text-race">NEAR YOU.</span>
+              Tire Installation <span className="text-race">Near You.</span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-graphite">
               Professional tire installation for sedans, SUVs, trucks and vans — seasonal tire swaps, mounting new tires on your rims, and

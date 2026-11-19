@@ -1,19 +1,27 @@
 import Hero from "@/components/home/Hero";
 import { BrandStrip, EditorialRow, FeaturedServices, FinalCta, HowItWorks, PrecisionBanner, Reviews, ServicesGrid, TrustStrip, type ServiceTile } from "@/components/home/Sections";
-import { HomeFaq, OffersTeaser, ShadeGuide, VisitShop } from "@/components/home/MoreSections";
+import { HOME_FAQS, HomeFaq, OffersTeaser, ShadeGuide, VisitShop } from "@/components/home/MoreSections";
 import { getActiveOffers, getCategories, getPage, getProducts, getSettings } from "@/lib/queries";
 import { IMG } from "@/lib/seed-data";
-import { localBusinessJsonLd } from "@/lib/seo";
+import { faqJsonLd, JsonLd } from "@/lib/seo";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
 
+export const metadata: Metadata = {
+  title: { absolute: "Tint, PPF & Tires in Scarborough, ON | Haven Customs" },
+  description:
+    "Haven Customs in Scarborough: window tint, paint protection film, ceramic coating, tires and dash cams. Get a quote or book online.",
+  alternates: { canonical: "/" },
+};
+
 const TILES = [
-  { title: "Window Tint", cats: ["window-tint"], img: IMG.tint },
-  { title: "Paint Protection", cats: ["paint-protection"], img: IMG.ppf },
-  { title: "Dashcams & CarPlay", cats: ["dashcams", "carplay-cameras"], img: IMG.dashcam },
-  { title: "Lighting", cats: ["lighting"], img: IMG.light },
-  { title: "Exterior Customization", cats: ["exterior"], img: IMG.exterior },
-  { title: "Tires & Repairs", cats: ["tires", "repairs"], img: IMG.tire },
+  { title: "Window Tint", cats: ["window-tint"], img: IMG.tint, alt: "Car with professionally tinted windows at Haven Customs" },
+  { title: "Paint Protection", cats: ["paint-protection"], img: IMG.ppf, alt: "Technician applying paint protection film to a car hood in Scarborough" },
+  { title: "Dashcams & CarPlay", cats: ["dashcams", "carplay-cameras"], img: IMG.dashcam, alt: "Dash cam installed behind the rear-view mirror" },
+  { title: "Lighting", cats: ["lighting"], img: IMG.light, alt: "Upgraded vehicle headlights installed at Haven Customs" },
+  { title: "Exterior Customization", cats: ["exterior"], img: IMG.exterior, alt: "Custom automotive upgrades installed at Haven Customs" },
+  { title: "Tires & Repairs", cats: ["tires", "repairs"], img: IMG.tire, alt: "Technician fitting a tire at Haven Customs in Scarborough" },
 ];
 
 export default async function HomePage() {
@@ -33,13 +41,13 @@ export default async function HomePage() {
       href: `/services?category=${t.cats.join(",")}`,
       // Admin-uploaded category covers win; otherwise use the current built-in artwork.
       image: cat?.image?.startsWith("/api/uploads/") ? cat.image : t.img,
-      alt: t.title,
+      alt: t.alt,
     };
   });
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd(settings)) }} />
+      <JsonLd data={faqJsonLd(HOME_FAQS)} />
       <Hero
         line1={home.heroLine1}
         line2={home.heroLine2}

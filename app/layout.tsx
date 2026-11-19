@@ -13,14 +13,20 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "Haven Customs | Tint, Protection & Custom Upgrades in Scarborough", template: "%s | Haven Customs" },
+  title: { default: "Tint, PPF & Tires in Scarborough, ON | Haven Customs", template: "%s | Haven Customs" },
   description:
     "Window tint, paint protection, dashcams, CarPlay, lighting, exterior styling and tire services in Scarborough, ON.",
   icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.ico" }], apple: "/apple-touch-icon.png" },
-  openGraph: { type: "website", siteName: "Haven Customs", locale: "en_CA" },
+  openGraph: {
+    type: "website",
+    siteName: "Haven Customs",
+    locale: "en_CA",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Haven Customs — tint, PPF and tires in Scarborough" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = { themeColor: "#ffffff" };
+export const viewport: Viewport = { themeColor: "#0d0d0f" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
