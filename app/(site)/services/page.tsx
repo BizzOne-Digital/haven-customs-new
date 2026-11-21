@@ -44,6 +44,7 @@ export default async function ServicesPage({ searchParams }: { searchParams: SP 
           <Suspense>
             <ServiceFilters categories={categories.map((c) => ({ slug: c.slug, name: c.name }))} />
           </Suspense>
+          <div className="services-results">
           <p className="mt-6 text-sm text-steel" aria-live="polite">
             {products.length} service{products.length === 1 ? "" : "s"}
           </p>
@@ -77,6 +78,7 @@ export default async function ServicesPage({ searchParams }: { searchParams: SP 
               </div>
             ))
           )}
+          </div>
         </div>
       </section>
     </>

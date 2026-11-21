@@ -15,14 +15,25 @@ export default function ServiceFilters({ categories }: { categories: Cat[] }) {
   const [pending, startTransition] = useTransition();
   const [q, setQ] = useState(params.get("q") ?? "");
 
-  const selected = (params.get("category") ?? "").split(",").filter(Boolean);
+  const urlCats = params.get("category") ?? "";
+  // Optimistic selection: the tab turns red on click, before the new results arrive.
+  const [pendingCats, setPendingCats] = useState<string | null>(null);
+  const [lastUrlCats, setLastUrlCats] = useState(urlCats);
+  if (lastUrlCats !== urlCats) {
+    setLastUrlCats(urlCats);
+    setPendingCats(null);
+  }
+  const selected = (pendingCats ?? urlCats).split(",").filter(Boolean);
   const vehicle = params.get("vehicle") ?? "";
 
   function push(next: { q?: string; category?: string[]; vehicle?: string }) {
     const sp = new URLSearchParams(params.toString());
     const set = (k: string, v?: string) => (v ? sp.set(k, v) : sp.delete(k));
     if ("q" in next) set("q", next.q?.trim());
-    if ("category" in next) set("category", next.category?.join(","));
+    if ("category" in next) {
+      set("category", next.category?.join(","));
+      setPendingCats(next.category?.join(",") ?? "");
+    }
     if ("vehicle" in next) set("vehicle", next.vehicle);
     startTransition(() => router.replace(`${pathname}${sp.size ? `?${sp}` : ""}`, { scroll: false }));
   }
@@ -35,12 +46,17 @@ export default function ServiceFilters({ categories }: { categories: Cat[] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q]);
 
-  const toggleCat = (slug: string) =>
-    push({ category: selected.includes(slug) ? selected.filter((s) => s !== slug) : [...selected, slug] });
+  // Tabs are single-select: a tab shows only its category; clicking the active tab returns to All.
+  // (Links such as ?category=tires,repairs can still pre-select several.)
+  const selectCat = (slug: string) => push({ category: selected.length === 1 && selected[0] === slug ? [] : [slug] });
+  const tabCls = (on: boolean) =>
+    `min-h-[40px] rounded-[2px] border px-3.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
+      on ? "border-race bg-race text-white" : "border-mist bg-white text-ink hover:border-ink"
+    }`;
   const active = selected.length > 0 || !!vehicle || !!params.get("q");
 
   return (
-    <div className="flex flex-col gap-5" aria-busy={pending}>
+    <div className="flex flex-col gap-5" aria-busy={pending} data-filters-pending={pending || undefined}>
       <div className="flex flex-col gap-3 md:flex-row">
         <label className="relative flex-1">
           <span className="sr-only">Search services</span>
@@ -66,6 +82,9 @@ export default function ServiceFilters({ categories }: { categories: Cat[] }) {
         </label>
       </div>
       <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter by category">
+        <button type="button" aria-pressed={selected.length === 0} onClick={() => push({ category: [] })} className={tabCls(selected.length === 0)}>
+          All
+        </button>
         {categories.map((c) => {
           const on = selected.includes(c.slug);
           return (
@@ -73,10 +92,8 @@ export default function ServiceFilters({ categories }: { categories: Cat[] }) {
               key={c.slug}
               type="button"
               aria-pressed={on}
-              onClick={() => toggleCat(c.slug)}
-              className={`min-h-[40px] rounded-[2px] border px-3.5 text-xs font-semibold uppercase tracking-[0.12em] transition-colors ${
-                on ? "border-race bg-race text-white" : "border-mist bg-white text-ink hover:border-ink"
-              }`}
+              onClick={() => selectCat(c.slug)}
+              className={tabCls(on)}
             >
               {c.name}
             </button>

@@ -126,6 +126,17 @@ function isSafeWidgetUrl(v: string) {
  */
 const HAVEN_BOOKING_WIDGET = "https://api.leadconnectorhq.com/widget/booking/nHnHjnp24SvMsZmSECZ2";
 
+/**
+ * Show booking slots in the shop's timezone for every visitor (GHL otherwise uses the viewer's
+ * browser timezone). GHL's widget reads ?timezone=; unknown params are not added.
+ */
+const SHOP_TIMEZONE = "America/Toronto";
+function withShopTimezone(url: string) {
+  const u = new URL(url);
+  if (!u.searchParams.has("timezone")) u.searchParams.set("timezone", SHOP_TIMEZONE);
+  return u.toString();
+}
+
 /** Public booking widget URLs (not secrets). Mapping keys match Product.calendarKey. */
 export function getBookingConfig(): BookingConfig {
   const defaultUrl = process.env.GHL_BOOKING_WIDGET_URL || HAVEN_BOOKING_WIDGET;
@@ -142,7 +153,10 @@ export function getBookingConfig(): BookingConfig {
   } catch {
     calendars = {};
   }
-  return { defaultUrl: isSafeWidgetUrl(defaultUrl) ? defaultUrl : "", calendars };
+  return {
+    defaultUrl: isSafeWidgetUrl(defaultUrl) ? withShopTimezone(defaultUrl) : "",
+    calendars: Object.fromEntries(Object.entries(calendars).map(([k, v]) => [k, withShopTimezone(v)])),
+  };
 }
 
 /* ───────────────────────── Meta Conversions API ───────────────────────── */

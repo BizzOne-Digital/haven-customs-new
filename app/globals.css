@@ -225,3 +225,6 @@ html.motion .is-in li:nth-child(n + 8) { transition-delay: 680ms; }
   .hero-loop, .hero-loop.is-returning { animation: none; }
 }
 
+
+/* Services filters: fade results while a new filter is loading */
+main:has([data-filters-pending]) .services-results { opacity: 0.45; transition: opacity 0.15s; pointer-events: none; }
